@@ -1,7 +1,12 @@
-*{
-  font-family:Poppins,sans-serif;
-} 
-html{
+* {
+  font-family: Poppins, sans-serif;
+}
+:root {
+  --colorA: #0171e1;
+  --colorB: #73a580;
+  --colorC: #3e363f;
+}
+html {
   scroll-behavior: smooth;
 }
 .App {
@@ -9,48 +14,55 @@ html{
   text-align: center;
 }
 /* styles for topNavbar */
-
-.plug_map{
+.leaflet-control-container .leaflet-routing-container-hide {
+  width: 40px !important;
+  height: 40px !important;
+  border-width: 5px;
+}
+.top_navbar {
+  background-color: transparent;
+}
+.plug_map {
   color: greenyellow;
   font-weight: bold;
   text-decoration: none;
 }
 
 /* map styles */
-.map-container{
+.map-container {
   position: relative;
   width: 100%;
   height: 90vh;
   z-index: 0;
 }
-.search-btn{
+.search-btn {
   position: absolute;
   top: 8%;
-  left:25%;
+  left: 25%;
   width: 50%;
   border: none;
   border-radius: 20px;
   box-shadow: -1px 14px 20px -10px rgba(0, 0, 0, 0.565);
   z-index: 1000;
 }
-.multi-icon{
+.multi-icon {
   transition-duration: 0.5s;
 }
-.marker-icon{
+.marker-icon {
   display: none;
 }
-.input{
+.input {
   border: none;
   font-size: 15px;
   width: 100%;
 }
-.input:focus{
+.input:focus {
   outline: none;
 }
 
 /*this is what is affecting the length of your routing control*/
-.leaflet-control-container { 
-  position: absolute; 
+.leaflet-control-container {
+  position: absolute;
   top: 5%;
   right: 13%;
 }
@@ -68,7 +80,7 @@ html{
   font-weight: bold;
   color: rgba(0, 0, 255, 0.763);
 }
-.pop-up{
+.pop-up {
   display: flex;
   flex-direction: column;
   width: 200px;
@@ -91,204 +103,232 @@ html{
   background-color: rgba(0, 0, 255, 0.565);
   color: white;
 } */
-.home-page{
+.home-page {
   position: relative;
 }
 
 /* side navbar styles */
-.navbar-side{
+.navbar-side {
   position: absolute;
   top: 0%;
-  left: 0%;
+  left: -100%;
   height: 90vh;
-  width: 49px;
+  width: 0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  box-shadow: 6px 0px 14px -6px rgba(0,0,0,0.75);
+  box-shadow: 6px 0px 14px -6px rgba(0, 0, 0, 0.75);
   transition-duration: 0.5s;
-  background:linear-gradient(rgb(8, 187, 8),rgba(255, 255, 255, 0.83));
+  background: linear-gradient(rgb(8, 187, 8), rgba(255, 255, 255, 0.83));
   z-index: 1000;
 }
-.navbar-side-width{
+.navbar-side-width {
   width: 250px;
+  left: 0;
 }
-.navbar-side-links{
-  width:100%;
-  padding:0;
+.navbar-side-links {
+  width: 100%;
+  padding: 0;
 }
-.home,.search,.contact{
+.home,
+.search,
+.contact {
   font-size: 1.8em;
 }
-.navbar-side-links a{
-  padding:0 10px;
+.navbar-side-links a {
+  padding: 0 10px;
   color: white;
   text-decoration: none;
   transition-duration: 0.5s;
 }
-.navbar-side-links a:hover{
+.navbar-side-links a:hover {
   background-color: rgba(0, 0, 0, 0.743);
   color: white;
   opacity: 0.5;
 }
-.navbar-side-links h3{
+.navbar-side-links h3 {
   transition-duration: 0.7s;
 }
-.menu-btn,.close-btn{
+.menu-btn,
+.close-btn {
   cursor: pointer;
-  /* background-color: rgba(255, 255, 255, 0.394); */
-  border-radius: 5px;
   transition-duration: 0.5s;
 }
-.menu-btn:hover,.close-btn:hover{
-  background-color: rgba(255, 255, 255, 0.362);
-}
-.live-location{
+
+.live-location {
   position: absolute;
   bottom: 10%;
   right: 2%;
   background-color: rgba(96, 169, 44, 0.672);
-  box-shadow: 5px 5px 10px -1px rgba(0,0,0,0.79);
+  box-shadow: 5px 5px 10px -1px rgba(0, 0, 0, 0.79);
   cursor: pointer;
   z-index: 1000;
   padding: 3px;
   transition-duration: 0.6s;
 }
-.live-location:hover{
+.live-location:hover {
   transform: scale(1.1);
 }
 /* to display the links */
-.display{
+.display {
   display: none;
 }
 /* footer styles */
-.footer-container{
-  background-color:#7d7f7c;
+.footer-container {
+  background-color: #7d7f7c;
   color: white;
 }
-.social-icons a{
+.social-icons a {
   text-decoration: none;
   font-size: larger;
 }
 
 /* styles for the icons */
 
-.twitter{
-  color: #1D9BF0;
+.twitter {
+  color: #1d9bf0;
   transition-duration: 0.5s;
   cursor: pointer;
 }
-.linkedin{
-  color: #0A66C2;
+.linkedin {
+  color: #0a66c2;
   transition-duration: 0.5s;
   cursor: pointer;
 }
-.instagram{
+.instagram {
   color: #a23a28;
   transition-duration: 0.5s;
   cursor: pointer;
 }
 .twitter:hover,
 .instagram:hover,
-.linkedin:hover{
+.linkedin:hover {
   transform: scale(1.5);
 }
-.e-mail,.telephone{
+.e-mail,
+.telephone {
   color: white;
   cursor: pointer;
   transition-duration: 0.5s;
 }
 .e-mail:hover,
-.telephone:hover{
+.telephone:hover {
   color: rgb(8, 187, 8);
 }
-.sieh-sefear{
+.sieh-sefear {
   cursor: pointer;
 }
-.sieh-sefear:hover{
-  color:greenyellow;
+.sieh-sefear:hover {
+  color: greenyellow;
 }
- 
-/* leaflet routing control styling */
- /* .leaflet-control-container{
-  width:320px;
-}  */
-.leaflet-routing-container.leaflet-bar.leaflet-control{
-  box-shadow: 8px 8px 30px -5px rgba(0,0,0,0.79);
-  padding:0 10px 10px 0;
+
+@media (min-width: 768px) {
+  .leaflet-routing-container {
+    box-shadow: 8px 8px 30px -5px rgba(0, 0, 0, 0.896);
+    padding: 0 10px 10px 0;
+    width: 400px !important;
+  }
+  .leaflet-routing-geocoder input {
+    font-size: large;
+    padding: 5px;
+  }
+  .leaflet-routing-alt td,
+  .leaflet-routing-alt h2,
+  .leaflet-routing-alt h3 {
+    font-size: medium !important;
+  }
+  .leaflet-routing-alt h2,
+  .leaflet-routing-alt h3 {
+    font-size: medium !important;
+    color: red;
+    font-weight: bold;
+  }
 }
-.leaflet-routing-collapse-btn::after{
+
+.leaflet-routing-alt h2,
+.leaflet-routing-alt h3 {
   color: red;
+  font-style: italic;
+  font-weight: bold;
+}
+.leaflet-routing-alt tbody tr:nth-child(2n-1) {
+  background-color: rgba(174, 255, 0, 0.213);
+}
+.leaflet-routing-collapse-btn::after {
+  color: black;
+  font-size: 30px;
 }
 /* styling for search btn */
-.leaflet-routing-container-hide .leaflet-routing-collapse-btn{
-  background-image:url('../node_modules/leaflet-routing-machine/dist/routing-icon.png')!important;
+.leaflet-routing-container-hide .leaflet-routing-collapse-btn {
+  background-image: url("../public/search_btn.jpeg") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 3px !important;
+  left: 5px !important;
+  border-radius: 50%;
 }
-.leaflet-routing-geocoders{
+.leaflet-routing-geocoders {
   background-color: whitesmoke;
   border-top-right-radius: 10px;
 }
-.leaflet-routing-geocoder input{
- padding: 5px;
-}
-.leaflet-routing-geocoder input:focus{
+
+.leaflet-routing-geocoder input:focus {
   outline: none;
 }
-
-
+button.leaflet-routing-add-waypoint {
+  display: none;
+}
 /* ABOUT STYLE */
-.about{
+.about {
   display: flex;
   align-items: center;
 }
-.about-svg{
+.about-svg {
   width: 50%;
 }
-.about-text{
+.about-text {
   width: 50%;
 }
 
 /* the to-top */
-.opct1{
+.opct1 {
   opacity: 1;
 }
-.opct0{
+.opct0 {
   opacity: 0;
 }
-.to-top{
-  position:fixed;
-  bottom: 10%;
-  right:3%;
+.to-top {
+  position: fixed;
+  bottom: 3%;
+  right: 2%;
   cursor: pointer;
-  border: 2px solid black;
-  border-radius: 20px;
+  background-color: #059435;
   transition-duration: 0.5s;
-  z-index:1000;
+  z-index: 1000;
 }
-.to-top:hover{
+.to-top:hover {
   background-color: rgba(0, 0, 0, 0.628);
 }
 
-
 /* MEDIA QUERIES */
 /* Navbar */
-@media (max-width:768px){
-  .social-icons{
+@media (max-width: 768px) {
+  .social-icons {
     flex-direction: column;
   }
-  .social-icons>div{
+  .social-icons > div {
     margin: 15px 0;
   }
-  .about-svg{
+  .about-svg {
     display: none;
   }
-  .about-text{
+  .about-text {
     width: 100%;
   }
- .leaflet-routing-geocoder input{
-  width: 200px!important;
- }
- 
 }
-
+@media (max-width: 465px) {
+  .leaflet-routing-geocoder input {
+    width: 200px !important;
+  }
+}
 
 /* Footer */
