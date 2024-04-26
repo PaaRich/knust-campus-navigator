@@ -18,7 +18,26 @@ html {
   width: 40px !important;
   height: 40px !important;
   border-width: 5px;
+  transition-duration: 0.5s;
 }
+
+.leaflet-control-container .leaflet-routing-container-hide:hover {
+  cursor: pointer;
+  width: 50px !important;
+}
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* Slightly larger size during the pulse */
+  }
+}
+/* .leaflet-control-container .leaflet-routing-container-hide:hover {
+  cursor: pointer;
+  width: 60px !important;
+} */
 .top_navbar {
   background-color: transparent;
 }
@@ -48,9 +67,9 @@ html {
 .multi-icon {
   transition-duration: 0.5s;
 }
-.marker-icon {
-  display: none;
-}
+/* .marker-icon {
+  animation: heartbeat 0.8s ease-in-out infinite;
+} */
 .input {
   border: none;
   font-size: 15px;
@@ -154,7 +173,7 @@ html {
   transition-duration: 0.5s;
 }
 
-.live-location {
+.live-location-container {
   position: absolute;
   bottom: 10%;
   right: 2%;
@@ -162,11 +181,10 @@ html {
   box-shadow: 5px 5px 10px -1px rgba(0, 0, 0, 0.79);
   cursor: pointer;
   z-index: 1000;
-  padding: 3px;
-  transition-duration: 0.6s;
+  animation: heartbeat 0.8s ease-in-out infinite;
 }
-.live-location:hover {
-  transform: scale(1.1);
+.live-location-container:hover {
+  animation-play-state: paused;
 }
 /* to display the links */
 .display {
@@ -174,7 +192,7 @@ html {
 }
 /* footer styles */
 .footer-container {
-  background-color: #7d7f7c;
+  background-color: #0e110cac;
   color: white;
 }
 .social-icons a {
@@ -220,10 +238,16 @@ html {
 .sieh-sefear:hover {
   color: greenyellow;
 }
-
+.leaflet-routing-container {
+  box-shadow: 5px 5px 10px -1px rgba(0, 0, 0, 0.79);
+}
 @media (min-width: 768px) {
+  .leaflet-control-container {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+  }
   .leaflet-routing-container {
-    box-shadow: 8px 8px 30px -5px rgba(0, 0, 0, 0.896);
     padding: 0 10px 10px 0;
     width: 400px !important;
   }
@@ -253,9 +277,8 @@ html {
 .leaflet-routing-alt tbody tr:nth-child(2n-1) {
   background-color: rgba(174, 255, 0, 0.213);
 }
-.leaflet-routing-collapse-btn::after {
-  color: black;
-  font-size: 30px;
+.leaflet-routing-collapsible {
+  box-shadow: 5px 5px 10px -1px rgba(0, 0, 0, 0.79);
 }
 /* styling for search btn */
 .leaflet-routing-container-hide .leaflet-routing-collapse-btn {
@@ -265,7 +288,15 @@ html {
   top: 3px !important;
   left: 5px !important;
   border-radius: 50%;
+  transition-duration: 0.5s;
 }
+.leaflet-routing-container span.leaflet-routing-collapse-btn:after {
+  color: black !important;
+}
+.leaflet-control-container .leaflet-routing-container-hide {
+  box-shadow: 5px 5px 10px -1px rgba(0, 0, 0, 0.622) !important;
+}
+
 .leaflet-routing-geocoders {
   background-color: whitesmoke;
   border-top-right-radius: 10px;
@@ -302,8 +333,14 @@ button.leaflet-routing-add-waypoint {
   right: 2%;
   cursor: pointer;
   background-color: #059435;
+  box-shadow: 5px 5px 10px -1px rgba(0, 0, 0, 0.79);
   transition-duration: 0.5s;
   z-index: 1000;
+}
+@media (max-width: 500px) {
+  .to-top {
+    bottom: 2%;
+  }
 }
 .to-top:hover {
   background-color: rgba(0, 0, 0, 0.628);
