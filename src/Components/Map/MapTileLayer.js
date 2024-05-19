@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BiCurrentLocation } from "react-icons/bi";
 import "../../../node_modules/leaflet/dist/leaflet.css";
-import { MapContainer, TileLayer, Marker, Popup, Circle } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 // import SearchBtn from './SearchBtn'
 import { DestinationMarker, subMarkers } from "./MarkerIcon";
 import { locMarkers } from "./coordsObject";
@@ -19,10 +19,10 @@ const MapTileLayer = (props) => {
   const [liveLocation, setLiveLocation] = useState(false);
   //Knust coordinates
   const position = [6.6749176575131255, -1.5716735902437842];
-  const knustBounds = [
-    [6.673175, -1.565423],
-    [6.673175, -1.565423],
-  ];
+  // const knustBounds = [
+  //   [6.673175, -1.565423],
+  //   [6.673175, -1.565423],
+  // ];
   const styles = {
     margin: "5px",
   };

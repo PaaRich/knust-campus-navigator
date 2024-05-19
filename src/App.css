@@ -14,6 +14,7 @@ html {
   text-align: center;
 }
 /* styles for topNavbar */
+
 .leaflet-control-container .leaflet-routing-container-hide {
   width: 40px !important;
   height: 40px !important;
@@ -34,10 +35,7 @@ html {
     transform: scale(1.1); /* Slightly larger size during the pulse */
   }
 }
-/* .leaflet-control-container .leaflet-routing-container-hide:hover {
-  cursor: pointer;
-  width: 60px !important;
-} */
+
 .top_navbar {
   background-color: transparent;
 }
@@ -86,14 +84,6 @@ html {
   right: 13%;
 }
 
-/* .leaflet-popup-content-wrapper, .leaflet-popup-tip {
-  background-color:transparent!important;
-  box-shadow: none!important;
-} */
-
-/* .leaflet-popup-content-wrapper{
-  background-color: red;
-} */
 .leaflet-popup-content {
   margin: 20px 10px;
   font-weight: bold;
@@ -104,24 +94,7 @@ html {
   flex-direction: column;
   width: 200px;
 }
-/* navbar styles */
-/* .navbar-container{
-  background-color:white;
-  box-shadow: -1px 14px 30px -10px rgba(0, 0, 0, 0.565);
-  z-index: 1000;
-}
-.sign-in{
-  background-color: rgba(0, 0, 255, 0.565);
-  color: white;
-  transition-duration: 0.5s;
-}
-.log-in{
-  transition-duration: 0.5s;
-}
-.log-in:hover{
-  background-color: rgba(0, 0, 255, 0.565);
-  color: white;
-} */
+
 .home-page {
   position: relative;
 }
